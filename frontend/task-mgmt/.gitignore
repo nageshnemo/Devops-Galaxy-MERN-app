@@ -1,0 +1,50 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build Files
+build/
+dist/
+
+# React Specific
+public/static/
+public/**/*.map
+src/**/*.map
+*.cache
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# OS Files
+*.DS_Store
+*.Thumbs.db
+
+# Coverage
+coverage/
+
+# Backend Specific
+package-lock.json
+yarn.lock

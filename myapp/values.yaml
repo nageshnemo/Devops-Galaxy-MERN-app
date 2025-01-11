@@ -1,0 +1,25 @@
+namespace: app-namespace
+
+backend:
+  image: asia-south1-docker.pkg.dev/fast-ability-439911-u1/react-app/backend-app:latest
+  replicas: 2
+  servicePort: 3000
+  db:
+    host: "35.222.175.73"
+    name: "task_mgmt"
+    port: 3306
+  secret:
+    user: "db-user"
+    password: "db-password"
+
+frontend:
+  image: asia-south1-docker.pkg.dev/fast-ability-439911-u1/react-app/frontend-app:latest
+  replicas: 2
+  servicePort: 80
+
+ingress:
+  enabled: true
+  host: local-app.com
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
+  backendPath: /api

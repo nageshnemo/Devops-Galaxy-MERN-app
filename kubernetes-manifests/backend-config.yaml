@@ -1,0 +1,10 @@
+# backend-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: app-namespace
+data:
+  DB_HOST: "35.222.175.73"
+  DB_NAME: "task_mgmt"
+  DB_PORT: "3306"
